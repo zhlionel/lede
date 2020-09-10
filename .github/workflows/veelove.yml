@@ -143,6 +143,19 @@ jobs:
 
           # 常用LuCI插件选择:
           cat >> .config <<EOF
+          CONFIG_PACKAGE_luci-app-advanced-reboot
+          CONFIG_PACKAGE_luci-app-attendedsysupgrade
+          CONFIG_PACKAGE_luci-app-dnscrypt-proxy
+          CONFIG_PACKAGE_luci-app-dnscrypt-dnsforwarder
+          CONFIG_PACKAGE_luci-app-familycloud=y
+          CONFIG_PACKAGE_luci-app-filetransfer=y
+          CONFIG_PACKAGE_luci-app-samba
+          CONFIG_PACKAGE_luci-app-vlmcsd
+          CONFIG_PACKAGE_luci-app-vsftpd
+          CONFIG_PACKAGE_luci-app-openclash=y
+          CONFIG_PACKAGE_luci-app-unblockmusic=y
+          CONFIG_UnblockNeteaseMusic_Go=y
+          CONFIG_UnblockNeteaseMusic_NodeJS=y
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-app-baidupcs-web=y
@@ -158,6 +171,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
@@ -171,6 +185,8 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
           CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-bootstrap=y
+          CONFIG_PACKAGE_luci-theme-freifunk-generic=y
           EOF
 
           # 常用软件包:
