@@ -56,10 +56,14 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
 
-      - name: 添加openclash
+      - name: openclash
         run: |
           git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 
+      - name: SSR plus
+        run: |
+          git clone https://github.com/maxlicheng/luci-app-ssr-plus.git package/luci-app-ssr-plus
+                    
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
@@ -171,7 +175,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
           CONFIG_PACKAGE_luci-app-qbittorrent=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
